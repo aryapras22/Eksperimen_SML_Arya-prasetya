@@ -14,7 +14,7 @@ Eksperimen_SML_Arya-prasetya/
 ├── preprocessing/
 │   ├── Eksperimen_Arya-prasetya.ipynb
 │   └── automate_Arya-prasetya.py
-├── namadataset_preprocessing/
+├── emotions_preprocessing/
 │   ├── full_preprocessed.csv
 │   ├── train_preprocessed.csv
 │   ├── val_preprocessed.csv
@@ -46,7 +46,7 @@ Script `preprocessing/automate_Arya-prasetya.py` digunakan untuk:
 - menghapus stopwords,
 - menghapus duplikasi,
 - membagi dataset menjadi train, validation, dan test,
-- menyimpan output preprocessing ke folder `namadataset_preprocessing/`.
+- menyimpan output preprocessing ke folder `emotions_preprocessing/`.
 
 ### 3. Workflow GitHub Actions
 
@@ -73,7 +73,7 @@ preprocessing/Eksperimen_Arya-prasetya.ipynb
 ```bash
 python preprocessing/automate_Arya-prasetya.py \
   --input_path emotion_raw/merged_training.pkl \
-  --output_dir namadataset_preprocessing
+  --output_dir emotions_preprocessing
 ```
 
 ## Output Preprocessing
