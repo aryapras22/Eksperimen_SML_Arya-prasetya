@@ -31,18 +31,18 @@ jobs:
         run: |
           python preprocessing/automate_Arya-prasetya.py \
             --input_path emotion_raw/merged_training.pkl \
-            --output_dir namadataset_preprocessing
+            --output_dir preprocessing/emotions_preprocessing
 
       - name: Upload preprocessing artifacts
         uses: actions/upload-artifact@v4
         with:
           name: emotion-preprocessed-data
-          path: namadataset_preprocessing/
+          path: preprocessing/emotions_preprocessing/
 
       - name: Commit updated preprocessing outputs
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add namadataset_preprocessing/*
+          git add preprocessing/emotions_preprocessing/*
           git diff --cached --quiet || git commit -m "Auto-update preprocessed dataset"
           git push
